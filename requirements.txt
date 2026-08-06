@@ -1,0 +1,8 @@
+# Community Cloud: install pre-built wheels only. This prevents source builds
+# (including Pillow) during deployment.
+--only-binary=:all:
+
+# Streamlit 1.61.1 supports Python 3.12. Pillow is explicitly pinned to a
+# CPython 3.12 manylinux wheel release, compatible with Streamlit (<13).
+streamlit==1.61.1
+Pillow==12.3.0
