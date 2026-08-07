@@ -29,7 +29,7 @@ def render_landing() -> None:
         st.markdown('<div class="quick-start-label">Demokunder</div>', unsafe_allow_html=True)
 
         preset_columns = st.columns(3)
-        presets = ("Novo Nordisk", "Bavarian Nordic", "LEGO")
+        presets = ("Bavarian Nordic", "AGC Biologics", "Lundbeck")
         for column, preset in zip(preset_columns, presets):
             with column:
                 if st.button(preset, key=f"preset_{preset}", use_container_width=True, type="secondary"):
